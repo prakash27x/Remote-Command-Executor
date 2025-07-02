@@ -1,7 +1,3 @@
-Here’s a **complete, well-structured `README.md` file** you can include with your project, fully tailored to the code you just shared:
-
----
-
 # 💻 Remote Command Execution (Client-Server) Project
 
 ## 📄 Description
@@ -25,7 +21,7 @@ It consists of two programs: a **server** and a **client**. The client connects 
 ## 🗂️ File Structure
 
 ```
-project/
+NP_Project/
 ├── client.cpp
 ├── server.cpp
 ├── README.md
