@@ -1,3 +1,7 @@
+Here’s your **updated README.md**, revised to reflect your new multi-client support:
+
+---
+
 # 💻 Remote Command Execution (Client-Server) Project
 
 ## 📄 Description
@@ -15,6 +19,7 @@ It consists of two programs: a **server** and a **client**. The client connects 
 * Create folders and files remotely
 * Edit and read file contents remotely
 * Supports continuous command execution until `exit` is typed
+* ✅ **Supports multiple clients simultaneously (multi-threaded server)**
 
 ---
 
@@ -61,7 +66,8 @@ cl client.cpp /EHsc /Fe:client.exe /link Ws2_32.lib
 .\server.exe
 ```
 
-Server starts listening on port **5500** and waits for client connections.
+The server starts listening on port **5500** and waits for incoming connections.
+**Multiple clients can connect at the same time, each handled in a separate thread.**
 
 ---
 
@@ -100,14 +106,8 @@ type myfolder\innerfile.txt
 
 ## ⚠️ Important Notes
 
-* Commands run in the context of the server system (use carefully!).
-* Only **one client is handled at a time**.
+* Commands run in the context of the **server system** (use carefully!).
+* The server supports **multiple clients simultaneously** using threads.
 * Firewall rules might need to be adjusted to allow TCP connections on port 5500.
-* `cmd.exe /c` is used, meaning any Windows shell command should work as if typed in a normal CMD window.
-
----
-
-
-## ⭐ Screenshots (Optional)
-
-
+* `cmd.exe /c` is used, so any Windows shell command should work as if typed in a normal CMD window.
+* Make sure to properly close each client by typing `exit` to avoid leaving threads hanging.
