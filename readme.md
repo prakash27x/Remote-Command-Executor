@@ -1,6 +1,3 @@
-Here’s your **updated README.md**, revised to reflect your new multi-client support:
-
----
 
 # 💻 Remote Command Execution (Client-Server) Project
 
