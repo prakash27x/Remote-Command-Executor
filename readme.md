@@ -1,8 +1,6 @@
 
 # 💻 Remote Command Execution (Client-Server) Project
 
-## 📄 Description
-
 This project implements a **simple remote command execution system using C++ and Winsock on Windows**.
 It consists of two programs: a **server** and a **client**. The client connects to the server over TCP, sends shell commands, and receives their output. The server executes these commands using `cmd.exe` and returns the result.
 
